@@ -8,4 +8,12 @@ In this analysis, a credit card dataset from LendingClub, a peer-to-peer lending
 
 ## Analysis and Results
 
+Before the data could be trained on a machine learning model, the data needed to be preprocessed. All null values were dropped, all columns were converted to numerical values, and the target column (risk) was separated and converted into two columns, one for low risk and one for high risk. The data was separated into features and the target and then split into training and testing datasets using *sklearn*.
+
+First we will discuss the oversampling methods. For this analysis, the *RandomOverSampler* from the *imblearn* library was imported and used to resample the training and testing data. The resampled data was trained on the logistic regression model and the balanced accuracy score, confusion matrix, and classfication report was generated using the *imbalanced_classification_report* from *imbalanced-learn*. A random state of 1 was used for each model to ensure consistency.
+
+ ![RandomOversampling.png](/Resources/RandomOversampling.png)
+ *Figure 1: The classification report for the random oversampler model*
+
+
 ## Summary

@@ -17,9 +17,9 @@ For this analysis, the *RandomOverSampler* from the *imblearn* library was impor
  ![RandomOversampling.png](/Resources/RandomOversampling.png)
  *Figure 1: The classification report for the random oversampler model*
 
-The balanced accuracy score was generated and found to be: 0.6438627638488825. The precision for this model is high but due to the recall, f1 score, and the balanced accuracy being low (farther from the ideal value of 1.0) this model is not looking like a good fit for our data. The measures are above 50% so it is not a terrible fit but given that is the first model tested out of six, hopefully one of the other models will generate higher scores.
+The balanced accuracy score was generated and found to be: **0.6438627638488825**. The precision for this model is high but due to the recall, f1 score, and the balanced accuracy being low (farther from the ideal value of 1.0) this model is not looking like a good fit for our data. The measures are above 50% so it is not a terrible fit but given that is the first model tested out of six, hopefully one of the other models will generate higher scores.
 
-The next model tested was the *SMOTE: Synthetic Minority Over-sampling Technique* from the *imblearn* library. This is again a Logistic Regression model, the balanced accuracy score for this model is: 0.6628910844779521. Already higher than the *RandomOverSampler*!
+The next model tested was the *SMOTE: Synthetic Minority Over-sampling Technique* from the *imblearn* library. This is again a Logistic Regression model, the balanced accuracy score for this model is: **0.6628910844779521**. Already higher than the *RandomOverSampler*!
 
 ![SMOTEOver.png](/Resources/SMOTEOver.png)
 *Figure 2: The classification report for the SMOTE oversample model*
@@ -31,7 +31,7 @@ The next method tested is an undersampling technique, the *Cluster Centroids* al
 ![ClusterCentroidUnder.png](Resources/ClusterCentroidUnder.png)
 *Figure 3: The classification report for the Cluster Centroid undersampling algorithm*
 
-The balanced accuracy score for this model is: 0.5442661782548694. The lowest score yet! Already the undersampling technique is not looking like the best option for this dataset. The f1 score and recall value are also the lowest so far at 0.56 and 0.40, respectively. Just comparing these first three models it seems that oversampling is a better technique than undersampling for our dataset. Undersampling works better when utilized with metadata, very large datasets, and could be redundant for this dataset and not actually helping to reduce the bias.
+The balanced accuracy score for this model is: **0.5442661782548694**. The lowest score yet! Already the undersampling technique is not looking like the best option for this dataset. The f1 score and recall value are also the lowest so far at 0.56 and 0.40, respectively. Just comparing these first three models it seems that oversampling is a better technique than undersampling for our dataset. Undersampling works better when utilized with metadata, very large datasets, and could be redundant for this dataset and not actually helping to reduce the bias.
 
 
 

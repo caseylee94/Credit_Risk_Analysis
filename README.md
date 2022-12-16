@@ -14,7 +14,7 @@ Before the data could be trained on a machine learning model, the data needed to
 
 First we will discuss the oversampling methods. The purpose of oversampling is to duplicate or create new synthetic examples in the minority classs. This will allow data that is underepresented in the set to be more represented and can offset bias in the data. This is important for this credit risk anaylsis because bad loans are a small population of the data but are what is most important to predict.
 
-For this analysis, the *RandomOverSampler* from the *imblearn* library was imported and used to resample the training and testing data. The resampled data was trained on the logistic regression model and the balanced accuracy score, confusion matrix, and classfication report were generated using the *imbalanced_classification_report* from *imbalanced-learn*. A random state of 1 was used for each model to ensure consistency.
+For this analysis, the *RandomOverSampler* from the *imblearn* library was imported and used to resample the training and testing data. The resampled data was trained on a logistic regression model and the balanced accuracy score, confusion matrix, and classfication report were generated using the *imbalanced_classification_report* from *imbalanced-learn*. A random state of 1 was used for each model to ensure consistency.
 
  ![RandomOversampling.png](/Resources/RandomOversampling.png)
  *Figure 1: The classification report for the random oversampler model*
@@ -26,7 +26,7 @@ The next model tested was the *SMOTE: Synthetic Minority Over-sampling Technique
 ![SMOTEOver.png](/Resources/SMOTEOver.png)
 *Figure 2: The classification report for the SMOTE oversample model*
 
-The f1 score for this model is 0.81 which is higher than the score for the *RandomOverSampler* model. The recall values is also higher but the recall is still only 0.69, not a bad score but something that might be improved upon in a different model. Out of the oversampling models tested, the *SMOTE* model is the better fit for our data. 
+The f1 score for this model is 0.81 which is higher than the score for the *RandomOverSampler* model. The recall value is also higher but the recall is still only 0.69, not a bad score but something that might be improved upon in a different model. Out of the oversampling models tested, the *SMOTE* model is the better fit for our data. 
 
 The next method tested is an undersampling technique, the *Cluster Centroids* algorithm from the *imblearn* library is used in this analysis. The purpose of undersampling is to delete or merge examples in the majority class. This will again help to reduce bias in the dataset and potentially increase the precision of the model to accurately predict risky credit loans.
 

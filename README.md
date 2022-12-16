@@ -33,6 +33,12 @@ The next method tested is an undersampling technique, the *Cluster Centroids* al
 
 The balanced accuracy score for this model is: **0.5442661782548694**. The lowest score yet! Already the undersampling technique is not looking like the best option for this dataset. The f1 score and recall value are also the lowest so far at 0.56 and 0.40, respectively. Just comparing these first three models it seems that oversampling is a better technique than undersampling for our dataset. Undersampling works better when utilized with metadata, very large datasets, and could be redundant for this dataset and not actually helping to reduce the bias.
 
+The *SMOTEENN* combinatorial over- and undersampler was tested next. This algorithm uses the same SMOTE method to synthetically generate more minority data points for oversampling, then undersamples this new dataset to potentially further reduce bias.
+
+![SMOTEENNOverUnder.png](Resources/SMOTEENNOverUnder.png)
+*Figure 4: The classification repot for the SMOTEENN algorithm*
+
+
 
 
 ## Summary

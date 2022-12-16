@@ -51,7 +51,7 @@ For this analysis, two ensemble methods were tested. First tested was the *Rando
 
 The f1 score and the recall scores are the highest tested so far; 0.92 and 0.87, respectively.
 
-The other ensemble method tested is the *ADA BOOST Easy Ensemble* model. ADA Boost uses decision stumps that only have one split for each stump; this is different from the Random Forest decision trees that have many splits or branches for each tree. Some of the stumps have more weight than others which is where the "boosting" of certain relationships happen. In Random Forest all of the trees have the same weight. The balanced accuracy score for this model is: **0.9316600714093861**.
+The other ensemble method tested is the *ADA BooST Easy Ensemble* model. *ADA Boost* uses decision stumps that only have one split for each stump; this is different from the *Random Forest* decision trees that have many splits or branches for each tree. Some of the stumps have more weight than others which is where the "boosting" of certain relationships happen. In *Random Forest* all of the trees have the same weight. The balanced accuracy score for this model is: **0.9316600714093861**.
 
 ![ADABoostCR.png](Resources/ADABoostCR.png)
 *Figure 6: The classification report for the ADA Boost model*
@@ -61,3 +61,6 @@ The f1 and the recall scores for this model are now the highest of them all; 0.9
 
 ## Summary
 
+Both of the ensemble methods have better scores and therefore can be assumed to be better fit models for this dataset than the over- and undersampling models. The *ADA Boost* has very high overall scores and these scores are higher than the *Random Forest* model. The *Cluster Centroids* algorithim has the lowest overall scores, concluding that undersampling is not a strong method for analyzing this data.
+
+However, the *ADA Boost* model is known to have issues with overfitting data, so it is important to take this into consideration moving forward with testing new data; considering how high the results are showing for this model, overfitting is a real concern. When moving forward and testing new data sets, I would consider using both the *Random Forest* and *ADA Boost* if possible to counterbalance against this overfitting issue. *Random Forest* is not totally free from overfitting; the scores are still very high itself but how extremely high the *ADA Boost* scores are seem unrealistic and knowing it is a model prone to overfitting I do not really trust it 100%. If only one model has to be chosen, I recommend the *Random Forest* model.

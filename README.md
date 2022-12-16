@@ -10,6 +10,8 @@ In this analysis, a credit card dataset from LendingClub, a peer-to-peer lending
 
 Before the data could be trained on a machine learning model, the data needed to be preprocessed. All null values were dropped, all columns were converted to numerical values, and the target column (risk) was separated and converted into two columns, one for low risk and one for high risk. The data was separated into features and the target and then split into training and testing datasets using *sklearn*.
 
+### Over- and Undersampling Techniques
+
 First we will discuss the oversampling methods. The purpose of oversampling is to duplicate or create new synthetic examples in the minority classs. This will allow data that is underepresented in the set to be more represented and can offset bias in the data. This is important for this credit risk anaylsis because bad loans are a small population of the data but are what is most important to predict.
 
 For this analysis, the *RandomOverSampler* from the *imblearn* library was imported and used to resample the training and testing data. The resampled data was trained on the logistic regression model and the balanced accuracy score, confusion matrix, and classfication report were generated using the *imbalanced_classification_report* from *imbalanced-learn*. A random state of 1 was used for each model to ensure consistency.
@@ -38,7 +40,9 @@ The *SMOTEENN* combinatorial over- and undersampler was tested next. This algori
 ![SMOTEENNOverUnder.png](Resources/SMOTEENNOverUnder.png)
 *Figure 4: The classification repot for the SMOTEENN algorithm*
 
+The balanced accuracy score for this model is: **0.6400726134353378**. This model is average compared to the other models, the f1 score sitting at 0.73 is pretty good but still less than the *SMOTE* algorithm on it's own. The precision is very high but the recall score is only 0.58. This model is less accurate as the *SMOTE* model, which is the best out of the over- and undersampling techniques.
 
+### Ensemble Methods
 
 
 ## Summary

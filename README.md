@@ -44,5 +44,20 @@ The balanced accuracy score for this model is: **0.6400726134353378**. This mode
 
 ### Ensemble Methods
 
+For this analysis, two ensemble methods were tested. First tested was the *Random Forest* algorithm; this method uses bagging as its ensemble method and decison trees as the classification method. The balanced accuracy score for this model is: 0.7714442339930907. The highest score yet! *Random Forest* is a model known for it's ease of use and generally high rate of accuracy. The method of using decision trees allows the data to be fit well to the model but does not run into the issue of overfitting as much as other ensemble methods.
+
+![RandomForestCR.png](Resources/RandomForestCR.png)
+*Figure 5: The classification report for the Random Forest model*
+
+The f1 score and the recall scores are the highest tested so far; 0.92 and 0.87, respectively.
+
+The other ensemble method tested is the *ADA BOOST Easy Ensemble* model. ADA Boost uses decision stumps that only have one split for each stump; this is different from the Random Forest decision trees that have many splits or branches for each tree. Some of the stumps have more weight than others which is where the "boosting" of certain relationships happen. In Random Forest all of the trees have the same weight. The balanced accuracy score for this model is: **0.9316600714093861**.
+
+![ADABoostCR.png](Resources/ADABoostCR.png)
+*Figure 6: The classification report for the ADA Boost model*
+
+The f1 and the recall scores for this model are now the highest of them all; 0.97 and 0.94, respectively. This model has shown the best overall scores of any of the models tested for this analysis.
+
 
 ## Summary
+
